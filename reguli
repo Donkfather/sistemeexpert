@@ -1,0 +1,170 @@
+scop ~ loc_concediu.
+
+reg (1)
+daca buget_disponibil este redus
+atunci in_romania fc 90.
+
+reg (2)
+daca buget_disponibil este mediu 
+atunci in_romania fc 70.
+
+reg (3)
+daca buget_disponibil este mare 
+atunci in_romania fc 50.
+
+reg (4)
+daca departare este aproape 
+atunci in_romania.
+
+reg (5)
+daca departare este departe 
+atunci in_romania fc 40.
+
+reg (6)
+daca in_romania si
+     la_mare si
+     tip_oferta este sejur_1_luna si
+     buget_disponibil este mare si 
+     anotimp este vara
+atunci loc_concediu este neptun fc 80.
+
+reg (7)
+daca in_romania si
+     la_mare si
+     tip_oferta este sejur_2_saptamani si
+     buget_disponibil este mare si 
+     anotimp este vara
+atunci loc_concediu este mamaia fc 90.
+reg (8)
+daca in_romania si
+     la_mare si
+     tip_oferta este sejur_2_saptamani si 
+     anotimp este vara
+atunci loc_concediu este costinesti fc 60.
+
+reg (9)
+daca in_romania si
+     not la_mare si
+     tip_oferta este excursie si 
+     anotimp este vara
+atunci loc_concediu este manastiri_oltenia fc 70.
+
+reg (10)
+daca in_romania si
+     not la_mare si
+     tip_oferta este excursie si 
+     anotimp este vara
+atunci loc_concediu este manastiri_moldova fc 60.
+
+reg (11)
+daca not la_mare si 
+     anotimp este vara
+atunci loc_concediu este delta_dunarii.
+
+reg (12)
+daca not la_mare si
+     tip_oferta este sejur_1_luna si 
+     anotimp este vara
+atunci loc_concediu_vara este busteni.
+
+reg (13)
+daca la_mare si
+     departare este foarte_departe si
+     buget_disponibil este mare si 
+     anotimp este vara
+atunci loc_concediu_vara este bahamas fc 80.
+
+reg (14)
+daca not la_mare si
+     departare este foarte_departe si
+     buget_disponibil este mare si
+     tip_oferta este excursie si 
+     anotimp este vara
+atunci loc_concediu este valea_loirei.
+
+reg (15)
+daca departare este aproape si
+     not la_mare si
+     buget_disponibil este mediu si 
+     anotimp este vara
+atunci loc_concediu_vara este sinaia fc 70.
+
+reg (16)
+daca la_mare si
+     buget_disponibil este mare si
+     anotimp este iarna
+atunci loc_concediu este rio_de_janeiro.
+
+reg (17)
+daca buget_disponibil este mare si
+     not la_mare si
+     departare este foarte_departe si
+     tip_oferta este excursie si
+     anotimp este iarna
+atunci loc_concediu este austria_germania_franta fc 90.
+
+reg (18)
+daca departare este foarte_departe si
+     not la_mare si
+     tip_oferta este sejur_2_saptamani si
+     buget_disponibil este mare si
+     anotimp este iarna
+atunci loc_concediu este chamonix fc 60.
+
+reg (19)
+daca departare este aproape si
+     not la_mare si
+     tip_oferta este sejur_2_saptamani si
+     buget_disponibil este mare si
+     anotimp este iarna
+atunci loc_concediu este poiana_brasov.
+
+reg (20)
+daca in_romania si
+     not la_mare si
+     tip_oferta este sejur_2_saptamani si
+     anotimp este iarna
+atunci loc_concediu este busteni fc 70.
+
+(
+intrebarea pentru anotimp ~ 
+textul_intrebarii ~ 'In ce anotimp preferati sa va petreceti concediul?' 
+optiunile 
+ - vara
+  iarna
+).
+
+(
+intrebarea pentru tip_oferta ~ 
+textul_intrebarii ~ 'Preferati sa mergeti intr o excursie, ori sa petreceti un sejur intr o statiune?' 
+optiunile 
+ - sejur_2_saptamani
+ - sejur_1_luna
+ excursie
+).
+
+(
+intrebarea pentru la_mare ~ 
+textul_intrebarii ~ 'Preferati sa petreceti concediul la mare?' 
+optiunile 
+ - da
+  nu
+).
+
+(
+intrebarea pentru departare ~ 
+textul_intrebarii ~ 'Preferati ca locul de petrecere a concediului sa fie mai aproape, ori mai departe de localitatea unde locuiti?' 
+optiunile 
+ - aproape
+ - departe
+  foarte_departe
+).
+
+(
+intrebarea pentru buget_disponibil ~ 
+textul_intrebarii ~ 'Ce tip de  buget alocati pentru petrecerea concediului?' 
+optiunile 
+ - redus
+ - mediu
+  mare
+).
