@@ -73,7 +73,7 @@ loc_concediu ~ manastiri_moldova ~ valoare factor cert ~ 60
 enumerare_premise ( 
 	 in_romania +
      not(la_mare) +
-     tip_oferta ~ excur+e + 
+     tip_oferta ~ excursie + 
      anotimp ~ vara
 ).
 
@@ -107,7 +107,7 @@ enumerare_premise (
 	 not(la_mare) +
      departare ~ foarte_departe +
      buget_disponibil ~ mare +
-     tip_oferta ~ excur+e + 
+     tip_oferta ~ excursie + 
      anotimp ~ vara
 ).
 
@@ -134,7 +134,7 @@ enumerare_premise (
 	 buget_disponibil ~ mare +
      not(la_mare) +
      departare ~ foarte_departe +
-     tip_oferta ~ excur+e +
+     tip_oferta ~ excursie +
      anotimp ~ iarna
 ).
 
@@ -192,7 +192,7 @@ optiunile
 (intrebare pentru ~ departare
 textul_intrebarii ~ 'Preferati ca locul de petrecere a concediului sa fie mai aproape, ori mai departe de localitatea unde locuiti?'
 optiunile
-- aproape]
+- aproape
 - departe
 - foarte_departe
 ).
