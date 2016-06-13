@@ -9,31 +9,31 @@ enumerare_premise (
 reg ( 2 )
 in_romania ~ valoare factor cert ~ 70
 enumerare_premise ( 
-	 buget_disponibil ~ mediu 
+	buget_disponibil ~ mediu 
 ).
 
 reg ( 3 )
 in_romania ~ valoare factor cert ~ 50
 enumerare_premise ( 
-	 buget_disponibil ~ mare 
+	buget_disponibil ~ mare 
 ).
 
 reg ( 4 )
 in_romania
 enumerare_premise ( 
-	 departare ~ aproape 
+	departare ~ aproape 
 ).
 
 reg ( 5 )
 in_romania ~ valoare factor cert ~ 40
 enumerare_premise ( 
-	 departare ~ departe 
+	departare ~ departe 
 ).
 
 reg ( 6 )
 loc_concediu ~ neptun ~ valoare factor cert ~ 80
 enumerare_premise ( 
-	 in_romania +
+	in_romania +
      la_mare +
      tip_oferta ~ sejur_1_luna +
      buget_disponibil ~ mare + 
@@ -43,7 +43,7 @@ enumerare_premise (
 reg ( 7 )
 loc_concediu ~ mamaia ~ valoare factor cert ~ 90
 enumerare_premise ( 
-	 in_romania +
+	in_romania +
      la_mare +
      tip_oferta ~ sejur_2_saptamani +
      buget_disponibil ~ mare + 
@@ -53,7 +53,7 @@ enumerare_premise (
 reg ( 8 )
 loc_concediu ~ costinesti ~ valoare factor cert ~ 60
 enumerare_premise ( 
-	 in_romania +
+	in_romania +
      la_mare +
      tip_oferta ~ sejur_2_saptamani + 
      anotimp ~ vara
@@ -62,7 +62,7 @@ enumerare_premise (
 reg ( 9 )
 loc_concediu ~ manastiri_oltenia ~ valoare factor cert ~ 70
 enumerare_premise ( 
-	 in_romania +
+	in_romania +
      not(la_mare) +
      tip_oferta ~ excursie + 
      anotimp ~ vara
@@ -71,7 +71,7 @@ enumerare_premise (
 reg ( 10 )
 loc_concediu ~ manastiri_moldova ~ valoare factor cert ~ 60
 enumerare_premise ( 
-	 in_romania +
+	in_romania +
      not(la_mare) +
      tip_oferta ~ excursie + 
      anotimp ~ vara
@@ -80,14 +80,14 @@ enumerare_premise (
 reg ( 11 )
 loc_concediu ~ delta_dunarii
 enumerare_premise ( 
-	 not(la_mare) + 
+	not(la_mare) + 
      anotimp ~ vara
 ).
 
 reg ( 12 )
 loc_concediu_vara ~ busteni
 enumerare_premise ( 
-	 not(la_mare) +
+	not(la_mare) +
      tip_oferta ~ sejur_1_luna + 
      anotimp ~ vara
 ).
@@ -95,7 +95,7 @@ enumerare_premise (
 reg ( 13 )
 loc_concediu_vara ~ bahamas ~ valoare factor cert ~ 80
 enumerare_premise ( 
-	 la_mare +
+	la_mare +
      departare ~ foarte_departe +
      buget_disponibil ~ mare + 
      anotimp ~ vara
@@ -104,7 +104,7 @@ enumerare_premise (
 reg ( 14 )
 loc_concediu ~ valea_loirei
 enumerare_premise ( 
-	 not(la_mare) +
+	not(la_mare) +
      departare ~ foarte_departe +
      buget_disponibil ~ mare +
      tip_oferta ~ excursie + 
@@ -112,9 +112,9 @@ enumerare_premise (
 ).
 
 reg ( 15 )
-loc_concediu_vara ~ sinaia ~ valoare factor cert ~ 70
+loc_concediu ~ sinaia ~ valoare factor cert ~ 70
 enumerare_premise ( 
-	 departare ~ aproape +
+	departare ~ aproape +
      not(la_mare) +
      buget_disponibil ~ mediu + 
      anotimp ~ vara
@@ -123,7 +123,7 @@ enumerare_premise (
 reg ( 16 )
 loc_concediu ~ rio_de_janeiro
 enumerare_premise ( 
-	 la_mare +
+	la_mare +
      buget_disponibil ~ mare +
      anotimp ~ iarna
 ).
@@ -131,7 +131,7 @@ enumerare_premise (
 reg ( 17 )
 loc_concediu ~ austria_germania_franta ~ valoare factor cert ~ 90
 enumerare_premise ( 
-	 buget_disponibil ~ mare +
+	buget_disponibil ~ mare +
      not(la_mare) +
      departare ~ foarte_departe +
      tip_oferta ~ excursie +
@@ -141,7 +141,7 @@ enumerare_premise (
 reg ( 18 )
 loc_concediu ~ chamonix ~ valoare factor cert ~ 60
 enumerare_premise ( 
-	 departare ~ foarte_departe +
+	departare ~ foarte_departe +
      not(la_mare) +
      tip_oferta ~ sejur_2_saptamani +
      buget_disponibil ~ mare +
@@ -151,7 +151,7 @@ enumerare_premise (
 reg ( 19 )
 loc_concediu ~ poiana_brasov
 enumerare_premise ( 
-	 departare ~ aproape +
+	departare ~ aproape +
      not(la_mare) +
      tip_oferta ~ sejur_2_saptamani +
      buget_disponibil ~ mare +
@@ -161,7 +161,7 @@ enumerare_premise (
 reg ( 20 )
 loc_concediu ~ busteni ~ valoare factor cert ~ 70
 enumerare_premise ( 
-	 in_romania +
+	in_romania +
      not(la_mare) +
      tip_oferta ~ sejur_2_saptamani +
      anotimp ~ iarna
