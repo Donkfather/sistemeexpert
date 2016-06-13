@@ -339,16 +339,16 @@ daca(Daca) --> lista_premise(Daca).
 
 % se opreste cand intelneste termenul atunci,
 %% altfel ia premizele, le baga in lista si apeleaza recursiv
-lista_premise([Daca]) --> propoz(Daca).
+lista_premise([Daca]) --> propoz(Daca),[')'].
 % se pot pune premize cu si cu , intre ele
 %% propz ia prima pereche de atribut valoare si ia lista premizelor
 lista_premise([Prima|Celalalte]) --> propoz(Prima),['+'],lista_premise(Celalalte).
 %lista_premise([Prima|Celalalte]) --> propoz(Prima),[','],lista_premise(Celalalte).
 
 %atunci merge pana gaseste factorul de certitudine
-atunci(Atunci,FC) --> propoz(Atunci),['~',valoare,factor,cert,'~'],[FC]. % DEBUG!!!!
+atunci(Atunci,FC) --> propoz(Atunci),['~',valoare,factor,cert,'~'],[FC],[enumerare_premise,'(']. % DEBUG!!!!
 % daca lipsteste cu desavarsire factorul de certitudine, il pune automat 100
-atunci(Atunci,100) --> propoz(Atunci).
+atunci(Atunci,100) --> propoz(Atunci),[enumerare_premise,'('].
 
 % asta ia bucatele din premize de tipul
 % not ceva
