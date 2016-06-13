@@ -1,0 +1,206 @@
+scopul~loc_concediu.
+
+reg ( 1 )
+in_romania ~ valoare factor cert ~ 90
+enumerare_premise (
+	buget_disponibil ~ redus
+).
+
+reg ( 2 )
+in_romania ~ valoare factor cert ~ 70
+enumerare_premise ( 
+	 buget_disponibil ~ mediu 
+).
+
+reg ( 3 )
+in_romania ~ valoare factor cert ~ 50
+enumerare_premise ( 
+	 buget_disponibil ~ mare 
+).
+
+reg ( 4 )
+in_romania
+enumerare_premise ( 
+	 departare ~ aproape 
+).
+
+reg ( 5 )
+in_romania ~ valoare factor cert ~ 40
+enumerare_premise ( 
+	 departare ~ departe 
+).
+
+reg ( 6 )
+loc_concediu ~ neptun ~ valoare factor cert ~ 80
+enumerare_premise ( 
+	 in_romania +
+     la_mare +
+     tip_oferta ~ sejur_1_luna +
+     buget_disponibil ~ mare + 
+     anotimp ~ vara
+).
+
+reg ( 7 )
+loc_concediu ~ mamaia ~ valoare factor cert ~ 90
+enumerare_premise ( 
+	 in_romania +
+     la_mare +
+     tip_oferta ~ sejur_2_saptamani +
+     buget_disponibil ~ mare + 
+     anotimp ~ vara
+).
+
+reg ( 8 )
+loc_concediu ~ costinesti ~ valoare factor cert ~ 60
+enumerare_premise ( 
+	 in_romania +
+     la_mare +
+     tip_oferta ~ sejur_2_saptamani + 
+     anotimp ~ vara
+).
+
+reg ( 9 )
+loc_concediu ~ manastiri_oltenia ~ valoare factor cert ~ 70
+enumerare_premise ( 
+	 in_romania +
+     not la_mare +
+     tip_oferta ~ excursie + 
+     anotimp ~ vara
+).
+
+reg ( 10 )
+loc_concediu ~ manastiri_moldova ~ valoare factor cert ~ 60
+enumerare_premise ( 
+	 in_romania +
+     not la_mare +
+     tip_oferta ~ excur+e + 
+     anotimp ~ vara
+).
+
+reg ( 11 )
+loc_concediu ~ delta_dunarii
+enumerare_premise ( 
+	 not la_mare + 
+     anotimp ~ vara
+).
+
+reg ( 12 )
+loc_concediu_vara ~ busteni
+enumerare_premise ( 
+	 not la_mare +
+     tip_oferta ~ sejur_1_luna + 
+     anotimp ~ vara
+).
+
+reg ( 13 )
+loc_concediu_vara ~ bahamas ~ valoare factor cert ~ 80
+enumerare_premise ( 
+	 la_mare +
+     departare ~ foarte_departe +
+     buget_disponibil ~ mare + 
+     anotimp ~ vara
+).
+
+reg ( 14 )
+loc_concediu ~ valea_loirei
+enumerare_premise ( 
+	 not la_mare +
+     departare ~ foarte_departe +
+     buget_disponibil ~ mare +
+     tip_oferta ~ excur+e + 
+     anotimp ~ vara
+).
+
+reg ( 15 )
+loc_concediu_vara ~ sinaia ~ valoare factor cert ~ 70
+enumerare_premise ( 
+	 departare ~ aproape +
+     not la_mare +
+     buget_disponibil ~ mediu + 
+     anotimp ~ vara
+).
+
+reg ( 16 )
+loc_concediu ~ rio_de_janeiro
+enumerare_premise ( 
+	 la_mare +
+     buget_disponibil ~ mare +
+     anotimp ~ iarna
+).
+
+reg ( 17 )
+loc_concediu ~ austria_germania_franta ~ valoare factor cert ~ 90
+enumerare_premise ( 
+	 buget_disponibil ~ mare +
+     not la_mare +
+     departare ~ foarte_departe +
+     tip_oferta ~ excur+e +
+     anotimp ~ iarna
+).
+
+reg ( 18 )
+loc_concediu ~ chamonix ~ valoare factor cert ~ 60
+enumerare_premise ( 
+	 departare ~ foarte_departe +
+     not la_mare +
+     tip_oferta ~ sejur_2_saptamani +
+     buget_disponibil ~ mare +
+     anotimp ~ iarna
+).
+
+reg ( 19 )
+loc_concediu ~ poiana_brasov
+enumerare_premise ( 
+	 departare ~ aproape +
+     not la_mare +
+     tip_oferta ~ sejur_2_saptamani +
+     buget_disponibil ~ mare +
+     anotimp ~ iarna
+).
+
+reg ( 20 )
+loc_concediu ~ busteni ~ valoare factor cert ~ 70
+enumerare_premise ( 
+	 in_romania +
+     not la_mare +
+     tip_oferta ~ sejur_2_saptamani +
+     anotimp ~ iarna
+).
+
+(intrebare pentru ~ anotimp
+textul_intrebarii ~ 'In ce anotimp preferati sa va petreceti concediul?'
+optiunile
+- iarna
+- vara
+).
+
+(intrebare pentru ~ tip_oferta
+textul_intrebarii ~ 'Preferati sa mergeti intr-o excursie, ori sa petreceti un sejur intr-o statiune?'
+optiunile
+- sejur_2_saptamani
+- sejur_1_luna
+- excursie
+).
+
+(intrebare pentru ~ la_mare
+textul_intrebarii ~ 'Preferati sa petreceti concediul la mare?'
+optiunile
+- da
+- nu
+).
+
+(intrebare pentru ~ departare
+textul_intrebarii ~ 'Preferati ca locul de petrecere a concediului sa fie mai aproape, ori mai departe de localitatea unde locuiti?'
+optiunile
+- aproape]
+- departe
+- foarte_departe
+).
+
+(intrebare pentru ~ buget_disponibil
+textul_intrebarii ~ 'Ce tip de  buget alocati pentru petrecerea concediului?'
+optiunile
+- redus
+- mediu
+- mare
+).

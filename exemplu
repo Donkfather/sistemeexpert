@@ -1,0 +1,44 @@
+scop%%personaj.
+
+regula nr %% 1
+vrajitoare %% fact certitudine %% 40
+enum conditii
+	[face_vraji].
+
+intrebare [par ;
+text: 'Ce culoare are parul?' ;
+variante : [rosu ; alb ; negru] ].
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+reg ( id )
+atribut_concluzie ~ valoare factor cert ~ nr 
+enumerare_premise ( 
+     atr~valoare + 
+     atr +
+     not(atr) 
+)
+.
+
+
+reg(id) (unde id este numarul regulii)
+atribut_concluzie ~ valoare factor cert ~ nr (concluzia; nr este factorul de certitudine)
+enumerare_premise ( (conditiile intre acolade, atributele separate cu virgula)
+     atr~valoare + (pentru atribute cu valori multiple)
+     atr +(pentru atribute booleene, valoare true)
+     not(atr) (pentru atribute booleene, valoare false)
+)
+.
+
+(intrebarea pentru ~ atribut 
+textul_intrebarii ~ 'continut intrebare' 
+optiunile
+- val1 
+- val2 
+- val3 
+).
+
+
+
+
+scop ~ atr
