@@ -1,0 +1,25 @@
+
+
+
+
+
+
+- TELEGRAF
+
+- TELEFON FIX
+
+- TELEFON MOBIL
+
+- FAX
+
+- INTERNET
+
+- FUM
+
+- SEMNE
+
+- COMUNICARE ORALA
+
+- CODUL MORSE
+
+- SPIRITUALA (daca esti mort)
