@@ -7,14 +7,6 @@ enumerare_premise (
      not(in_viata)
 ).
 
-reg ( 5 )
-d_stare_perfecta ~ da 
-enumerare_premise ( 
-     d_vede +
-     d_aude +
-     d_vorbeste
-).
-
 reg ( 3 )
 d_surd ~ da
 enumerare_premise ( 
@@ -63,22 +55,6 @@ enumerare_premise (
      not(d_surd)
 ).
 
-reg ( 9 )
-tip_de_comunicare ~ nu_exista ~ valoare factor cert ~ 80
-enumerare_premise ( 
-     d_surd +
-     d_orb +
-     d_mut
-).
-
-reg ( 10 )
-d_stare_perfecta ~ da 
-enumerare_premise ( 
-     e_vede +
-     e_aude +
-     e_vorbeste
-).
-
 reg ( 11 )
 e_surd ~ da
 enumerare_premise ( 
@@ -119,14 +95,6 @@ enumerare_premise (
      e_mut +
      e_orb +
      not(e_surd)
-).
-
-reg ( 17 )
-tip_de_comunicare ~ nu_exista ~ valoare factor cert ~ 80
-enumerare_premise ( 
-     e_surd +
-     e_orb +
-     e_mut
 ).
 
 reg ( 18 )
