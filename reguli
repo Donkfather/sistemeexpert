@@ -1,0 +1,200 @@
+scopul~tip_de_comunicare.
+
+
+reg ( 1 )
+tip_de_comunicare ~ spirituala ~ valoare factor cert ~ 99
+enumerare_premise ( 
+     not(in_viata)
+).
+
+reg ( 5 )
+d_stare_perfecta ~ da 
+enumerare_premise ( 
+     d_vede +
+     d_aude +
+     d_vorbeste
+).
+
+reg ( 3 )
+d_surd ~ da
+enumerare_premise ( 
+     not(d_aude) 
+).
+reg ( 19 )
+d_surd ~ nu
+enumerare_premise ( 
+     d_aude
+).
+
+
+reg ( 4 )
+d_mut ~ da
+enumerare_premise ( 
+     not(d_vorbeste) 
+).
+
+reg ( 2 )
+d_orb ~ da
+enumerare_premise ( 
+     not(d_vede) 
+).
+
+reg ( 6 )
+d_surdo_mut ~ da
+enumerare_premise ( 
+     d_surd +
+     not(d_orb) +
+     d_mut
+).
+
+reg ( 7 )
+d_surdo_orb ~ da
+enumerare_premise ( 
+     d_surd +
+     d_orb +
+     not(d_mut)
+).
+
+reg ( 8 )
+d_mut_orb ~ da
+enumerare_premise ( 
+     d_mut +
+     d_orb +
+     not(d_surd)
+).
+
+reg ( 9 )
+tip_de_comunicare ~ nu_exista ~ valoare factor cert ~ 80
+enumerare_premise ( 
+     d_surd +
+     d_orb +
+     d_mut
+).
+
+reg ( 10 )
+d_stare_perfecta ~ da 
+enumerare_premise ( 
+     e_vede +
+     e_aude +
+     e_vorbeste
+).
+
+reg ( 11 )
+e_surd ~ da
+enumerare_premise ( 
+     not(e_aude) 
+).
+
+reg ( 12 )
+e_mut ~ da
+enumerare_premise ( 
+     not(e_vorbeste) 
+).
+
+reg ( 13 )
+e_orb ~ da
+enumerare_premise ( 
+     not(e_vede) 
+).
+
+reg ( 14 )
+e_surdo_mut ~ da
+enumerare_premise ( 
+     e_surd +
+     not(e_orb) +
+     e_mut
+).
+
+reg ( 15 )
+e_surdo_orb ~ da
+enumerare_premise ( 
+     e_surd +
+     e_orb +
+     not(e_mut)
+).
+
+reg ( 16 )
+e_mut_orb ~ da
+enumerare_premise ( 
+     e_mut +
+     e_orb +
+     not(e_surd)
+).
+
+reg ( 17 )
+tip_de_comunicare ~ nu_exista ~ valoare factor cert ~ 80
+enumerare_premise ( 
+     e_surd +
+     e_orb +
+     e_mut
+).
+
+reg ( 18 )
+tip_de_comunicare ~ verbala ~ valoare factor cert ~ 90
+enumerare_premise ( 
+     distanta ~ mica +
+     not(d_surd) +
+     not(e_mut)
+).
+
+
+
+(intrebare pentru ~ in_viata
+textul_intrebarii ~ 'Destinatarul este viu?'
+optiunile
+- da
+- nu
+).
+
+(intrebare pentru ~ d_vede
+textul_intrebarii ~ 'Destinatarul are capacitate vizuala?'
+optiunile
+- da
+- nu
+).
+
+(intrebare pentru ~ d_vorbeste
+textul_intrebarii ~ 'Destinatarul are capacitate verbala?'
+optiunile
+- da
+- nu
+).
+
+(intrebare pentru ~ d_aude
+textul_intrebarii ~ 'Destinatarul are capacitate auditiva?'
+optiunile
+- da
+- nu
+).
+
+(intrebare pentru ~ e_vede
+textul_intrebarii ~ 'Aveti capacitate vizuala?'
+optiunile
+- da
+- nu
+).
+
+(intrebare pentru ~ e_vorbeste
+textul_intrebarii ~ 'Aveti capacitate verbala?'
+optiunile
+- da
+- nu
+).
+
+(intrebare pentru ~ e_aude
+textul_intrebarii ~ 'Aveti capacitate auditiva?'
+optiunile
+- da
+- nu
+).
+
+(intrebare pentru ~ distanta
+textul_intrebarii ~ 'Care este distanta ?'
+optiunile
+- mica
+- medie
+- mare
+).
+
+
+
