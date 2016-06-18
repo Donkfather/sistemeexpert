@@ -1,13 +1,13 @@
 prin:
- 1. fum			3	daca vede
- 2. fax				daca vede
- 3. telefon			daca aude
- 4. internet		daca vede sau daca aude
+ 1!. fum			3	daca vede
+ 2!. fax				daca vede
+ 3!. telefon			daca aude
+ 4!. internet		daca vede sau daca aude
  5. telegraf	4 	daca nu poate vorbi
- 6. semne		2 	daca nu poate vorbi; daca vede; daca nu aude
- 7. verbal		1 	daca aude
- 8. spiritual	10 	daca e mort
- 9. satelit			daca aude
+ 6!. semne		2 	daca nu poate vorbi; daca vede; daca nu aude
+ 7!. verbal		1 	daca aude
+ 8!. spiritual	10 	daca e mort
+ 9!. translator			daca aude
 10. posta		5	daca vede
 
 
