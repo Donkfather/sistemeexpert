@@ -220,19 +220,19 @@ proceseaza_raspuns([X],_,Lista_opt):-
 	member(X,Lista_opt).
 % daca in raspuns user-ul da si FC, acesta este luat
 %% in considerare si suprascrie FC initial al atributului
-proceseaza_raspuns([X,fc,FC],_,Lista_opt):-
+proceseaza_raspuns([X,'~',valoare, factor, cert, '~',FC],_,Lista_opt):-
 	member(X,Lista_opt),float(FC).
 
-assert_fapt(Atr,[Val,fc,FC]) :-
+assert_fapt(Atr,[Val,'~',valoare, factor, cert, '~',FC]) :-
 	!,asserta( fapt(av(Atr,Val),FC,[utiliz]) ).
 assert_fapt(Atr,[Val]) :-
 	asserta( fapt(av(Atr,Val),100,[utiliz])).
 
 det_val_fc([nu],da,-100).
 det_val_fc([nu,FC],da,NFC) :- NFC is -FC.
-det_val_fc([nu,fc,FC],da,NFC) :- NFC is -FC.
+det_val_fc([nu,'~',valoare, factor, cert, '~',FC],da,NFC) :- NFC is -FC.
 det_val_fc([Val,FC],Val,FC).
-det_val_fc([Val,fc,FC],Val,FC).
+det_val_fc([Val,'~',valoare, factor, cert, '~',FC],Val,FC).
 det_val_fc([Val],Val,100).
 
 afis_istorie([]) :- nl.
