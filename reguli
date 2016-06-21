@@ -2,112 +2,140 @@ scopul~tip_de_comunicare.
 
 
 
-
-reg ( 2 )
+reg ( 1 )
 d_surd ~ da
 enumerare_premise ( 
      not(d_aude) 
 ).
 
-reg ( 3 )
+reg ( 2 )
 d_surd ~ nu
 enumerare_premise ( 
      d_aude
 ).
 
 
-reg ( 4 )
+reg ( 3 )
 d_mut ~ da
 enumerare_premise ( 
      not(d_vorbeste) 
 ).
 
-reg ( 5 )
+reg ( 4 )
 d_mut ~ nu
 enumerare_premise ( 
      d_vorbeste 
 ).
 
-reg ( 6 )
+reg ( 5 )
 d_orb ~ da
 enumerare_premise ( 
      not(d_vede) 
 ).
 
-reg ( 7 )
+reg ( 6 )
 d_orb ~ nu
 enumerare_premise ( 
      d_vede 
 ).
 
-reg ( 8 )
+reg ( 7 )
 e_surd ~ da
 enumerare_premise ( 
      not(e_aude) 
 ).
 
-reg ( 9 )
+reg ( 8 )
 e_surd ~ nu
 enumerare_premise ( 
      e_aude 
 ).
 
-reg ( 10 )
+reg ( 9 )
 e_mut ~ da
 enumerare_premise ( 
      not(e_vorbeste) 
 ).
 
-reg ( 11 )
+reg ( 10 )
 e_mut ~ nu
 enumerare_premise ( 
      e_vorbeste 
 ).
 
-reg ( 12 )
+reg ( 11 )
 e_orb ~ da
 enumerare_premise ( 
      not(e_vede) 
 ).
 
-reg ( 13 )
+reg ( 12 )
 e_orb ~ nu
 enumerare_premise ( 
      e_vede 
 ).
 
-reg ( 14 )
+reg ( 13 )
 tip_de_comunicare ~ spirituala ~ valoare factor cert ~ 99
 enumerare_premise ( 
      not(in_viata)
 ).
 
-reg ( 34 )
+reg ( 14 )
 tip_de_comunicare ~ prin_fum ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
      locatie ~ insula +
      distanta ~ medie +
      not(semnal_telefon) +
+     not(acces_internet) +
      lemne +
      d_orb ~ nu +
      e_orb ~ nu
 ).
 
-reg ( 35 )
+
+reg ( 15 )
 tip_de_comunicare ~ prin_fum ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
      locatie ~ pustietate +
      distante ~ medie +
-     lemne +
      not(semna_telefon) +
+     not(acces_internet) +
+     lemne +
+     d_orb ~ nu +
+     e_orb ~ nu
+).
+reg ( 16 )
+tip_de_comunicare ~ prin_fum ~ valoare factor cert ~ 70
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ mare +
+     not(semnal_telefon) +
+     not(acces_internet) +
+     lemne +
      d_orb ~ nu +
      e_orb ~ nu
 ).
 
-reg ( 15 )
-tip_de_comunicare ~ verbala ~ valoare factor cert ~ 90
+
+reg ( 17 )
+tip_de_comunicare ~ prin_fum ~ valoare factor cert ~ 70
+enumerare_premise ( 
+     in_viata +
+     locatie ~ pustietate +
+     distante ~ mare +
+     not(semna_telefon) +
+     not(acces_internet) +
+     lemne +
+     d_orb ~ nu +
+     e_orb ~ nu
+).
+
+reg ( 18 )
+tip_de_comunicare ~ verbala ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
      distanta ~ mica +
@@ -117,80 +145,19 @@ enumerare_premise (
      e_surd ~ nu +
      limba
 ).
-
-reg ( 16 )
-tip_de_comunicare ~ semne ~ valoare factor cert ~ 80
-enumerare_premise ( 
-     in_viata +
-     distanta ~ mica +
-     e_orb ~ nu +
-     d_orb ~ nu 
-).
-
-reg ( 17 )
-tip_de_comunicare ~ semne ~ valoare factor cert ~ 99
-enumerare_premise ( 
-     in_viata +
-     distanta ~ mica +
-     e_orb ~ nu +
-     d_orb ~ nu +
-     e_surd +
-     d_surd +
-     e_mut +
-     d_mut 
-).
-
-reg ( 18 )
-tip_de_comunicare ~ semne ~ valoare factor cert ~ 95
-enumerare_premise ( 
-     in_viata +
-     distanta ~ mica +
-     e_orb ~ nu +
-     d_orb ~ nu +
-     d_surd +
-     e_mut 
-).
-
 reg ( 19 )
-tip_de_comunicare ~ semne ~ valoare factor cert ~ 95
-enumerare_premise ( 
-     in_viata +
-     distanta ~ mica +
-     e_orb ~ nu +
-     d_orb ~ nu +
-     e_surd +
-     d_mut 
-).
-
-reg ( 20 )
-tip_de_comunicare ~ prin_telefon ~ valoare factor cert ~ 95
+tip_de_comunicare ~ verbala ~ valoare factor cert ~ 70
 enumerare_premise ( 
      in_viata +
      distanta ~ medie +
-     semnal_telefon + 
-     numar_telefon +
-     e_surd ~ nu +
-     e_mut ~ nu +
      d_surd ~ nu +
      d_mut ~ nu +
+     e_mut ~ nu + 
+     e_surd ~ nu +
      limba
 ).
 
-reg ( 21 )
-tip_de_comunicare ~ prin_telefon ~ valoare factor cert ~ 99
-enumerare_premise ( 
-     in_viata +
-     distanta ~ mare +
-     semnal_telefon + 
-     numar_telefon +
-     e_surd ~ nu +
-     e_mut ~ nu +
-     d_surd ~ nu +
-     d_mut ~ nu +
-     limba
-).
-
-reg ( 22 )
+reg ( 20 )
 tip_de_comunicare ~ verbal_prin_translator ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
@@ -201,207 +168,760 @@ enumerare_premise (
      d_mut ~ nu +
      not(limba) 
 ).
-reg ( 23 )
-tip_de_comunicare ~ prin_telefon_cu_translator ~ valoare factor cert ~ 99
+
+reg ( 21 )
+tip_de_comunicare ~ semne ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
-     distanta ~ mare +
-     semnal_telefon + 
-     numar_telefon +
-     e_surd ~ nu +
-     e_mut ~ nu +
-     d_surd ~ nu +
-     d_mut ~ nu +
-     limba
-).
-reg ( 24 )
-tip_de_comunicare ~ prin_telefon_cu_translator ~ valoare factor cert ~ 99
-enumerare_premise ( 
-     in_viata +
-     distanta ~ mare +
-     semnal_telefon + 
-     numar_telefon +
-     e_surd ~ nu +
-     e_mut ~ nu +
-     d_surd ~ nu +
-     d_mut ~ nu +
-     not(limba)
+     distanta ~ mica +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     e_surd ~ da +
+     d_surd ~ da +
+     e_mut ~ da +
+     d_mut ~ da 
 ).
 
+reg ( 22 )
+tip_de_comunicare ~ semne ~ valoare factor cert ~ 80
+enumerare_premise ( 
+     in_viata +
+     distanta ~ mica +
+     e_orb ~ nu +
+     d_orb ~ nu 
+).
+
+
+reg ( 23 )
+tip_de_comunicare ~ semne ~ valoare factor cert ~ 85
+enumerare_premise ( 
+     in_viata +
+     distanta ~ mica +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     d_surd ~ da +
+     e_mut ~ da 
+).
+
+reg ( 24 )
+tip_de_comunicare ~ semne ~ valoare factor cert ~ 85
+enumerare_premise ( 
+     in_viata +
+     distanta ~ mica +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     e_surd +
+     d_mut 
+).
 
 reg ( 25 )
-tip_de_comunicare ~ prin_telefon_cu_translator ~ valoare factor cert ~ 95
+tip_de_comunicare ~ semne_prin_translator ~ valoare factor cert ~ 95
 enumerare_premise ( 
      in_viata +
-     distanta ~ medie +
-     semnal_telefon + 
-     numar_telefon +
+     distanta ~ mica +
+     d_orb ~ nu +
+     d_surd ~ da +
+     d_mut ~ da +
+     e_orb ~ da +
      e_surd ~ nu +
-     d_surd ~ nu +
-     not(limba)
+     e_mut ~ nu
 ).
 
-
 reg ( 26 )
-tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 95
+tip_de_comunicare ~ semne_prin_translator ~ valoare factor cert ~ 95
 enumerare_premise ( 
      in_viata +
-     locatie ~ oras +
-     d_orb ~ nu +
-     e_orb ~ nu +
-     distanta ~ medie +
-     mesaj_media +
-     not(acces_internet) +
-     linie_fax +
-     numar_telefon
+     distanta ~ mica +
+     d_orb ~ da +
+     d_surd ~ nu +
+     d_mut ~ nu + 
+     e_surd ~ da +
+     e_mut ~ da +
+     e_orb ~ nu
 ).
 
 reg ( 27 )
-tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 95
+tip_de_comunicare ~ prin_telefon ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
-     locatie ~ oras +
-     d_orb ~ nu +
-     e_orb ~ nu +
      distanta ~ medie +
+     semnal_telefon + 
+     e_surd ~ nu +
+     e_mut ~ nu +
+     d_surd ~ nu +
+     d_mut ~ nu +
      not(mesaj_media) +
-     not(acces_internet) +
-     linie_fax +
-     numar_telefon
+     numar_telefon +
+     limba
 ).
 
-
 reg ( 28 )
-tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 99
+tip_de_comunicare ~ prin_telefon ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
-     locatie ~ oras +
-     d_orb ~ nu +
-     e_orb ~ nu +
-     distanta ~ medie +
-     mesaj_media +
-     not(acces_internet) +
-     linie_fax +
-     numar_telefon
+     distanta ~ mare +
+     semnal_telefon + 
+     e_surd ~ nu +
+     e_mut ~ nu +
+     d_surd ~ nu +
+     d_mut ~ nu +
+     numar_telefon +
+     limba
 ).
 
 reg ( 29 )
-tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 99
+tip_de_comunicare ~ prin_telefon_cu_translator ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
-     locatie ~ oras +
-     d_orb ~ nu +
-     e_orb ~ nu +
      distanta ~ medie +
-     not(mesaj_media)  +
-     not(acces_internet) +
-     linie_fax +
-     numar_telefon
+     semnal_telefon + 
+     numar_telefon +
+     e_surd ~ nu +
+     d_surd ~ nu +
+     e_mut ~ nu +
+     d_mut ~ nu +
+     not(mesaj_media) +
+     not(limba)
 ).
 
+
 reg ( 30 )
-tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 95
+tip_de_comunicare ~ prin_telefon_cu_translator ~ valoare factor cert ~ 95
 enumerare_premise ( 
      in_viata +
-     locatie ~ oras +
      distanta ~ mare +
-     d_orb ~ nu +
-     e_orb ~ nu +
-     mesaj_media +
-     not(acces_internet) +
-     linie_fax +
-     numar_telefon
+     semnal_telefon + 
+     numar_telefon +
+     e_surd ~ nu +
+     d_surd ~ nu +
+     e_mut ~ nu +
+     d_mut ~ nu +
+     not(mesaj_media) +
+     not(limba)
 ).
 
 reg ( 31 )
-tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 95
+tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 90
 enumerare_premise ( 
      in_viata +
-     locatie ~ oras +
-     e_orb ~ nu +
+     distanta ~ medie +
+     acces_internet
+     d_surd ~ nu +
+     d_mut ~ nu +
+     e_surd ~ nu +
+     e_mut ~ nu +
+     semnal_telefon +
+     numar_telefon +
+     mesaj_media +
      d_orb ~ nu +
-     distanta ~ mare +
-     not(mesaj_media) +
-     not(acces_internet) +
-     linie_fax +
-     numar_telefon
+     e_orb ~ nu +
 ).
 
-
 reg ( 32 )
-tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 99
+tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 60
 enumerare_premise ( 
      in_viata +
-     locatie ~ oras +
-     e_orb ~ nu +
+     distanta ~ medie +
+     acces_internet
      d_orb ~ nu +
-     distanta ~ mare +
-     mesaj_media +
-     not(acces_internet) +
-     linie_fax +
-     numar_telefon
+     e_orb ~ nu +
+     d_surd ~ nu +
+     d_mut ~ nu +
+     e_surd ~ nu +
+     e_mut ~ nu +
+     semnal_telefon +
+     numar_telefon +
+     not(mesaj_media) +
 ).
 
 reg ( 33 )
-tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 99
+tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 90
 enumerare_premise ( 
      in_viata +
-     locatie ~ oras +
-     e_orb ~ nu +
-     d_orb ~ nu +
      distanta ~ mare +
+     acces_internet
+     d_surd ~ nu +
+     d_mut ~ nu +
+     e_surd ~ nu +
+     e_mut ~ nu +
+     semnal_telefon +
+     numar_telefon +
+     mesaj_media +
+     d_orb ~ nu +
+     e_orb ~ nu +
+).
+
+reg ( 34 )
+tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     distanta ~ mare +
+     acces_internet
+     d_surd ~ nu +
+     d_mut ~ nu +
+     e_surd ~ nu +
+     e_mut ~ nu +
+     semnal_telefon +
+     numar_telefon +
      not(mesaj_media) +
-     not(acces_internet) +
-     linie_fax +
-     numar_telefon
+     d_orb ~ nu +
+     e_orb ~ nu +
+).
+
+reg ( 35 )
+tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 99
+enumerare_premise ( 
+     in_viata +
+     distanta ~ medie +
+     acces_internet
+     mesaj_media +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     not(semnal_telefon) +
 ).
 
 reg ( 36 )
 tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
+     distanta ~ medie +
+     acces_internet
+     mesaj_media +
      d_orb ~ nu +
      e_orb ~ nu +
-     distanta ~ medie +
-     mesaj_media +
-     acces_internet
+     not(numar_telefon) +
 ).
 
 reg ( 37 )
-tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 99
+tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 80
 enumerare_premise ( 
      in_viata +
+     distanta ~ medie +
+     acces_internet
+     not(mesaj_media) +
      d_orb ~ nu +
      e_orb ~ nu +
-     distanta ~ medie +
-     not(mesaj_media) +
-     acces_internet
+     not(semnal_telefon) +
 ).
 
 reg ( 38 )
-tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 99
+tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 90
 enumerare_premise ( 
      in_viata +
+     distanta ~ mare +
+     acces_internet
+     mesaj_media +
+     not(semnal_telefon) +
      d_orb ~ nu +
      e_orb ~ nu +
-     distanta ~ mare +
-     mesaj_media +
-     acces_internet
 ).
 
 reg ( 39 )
-tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 99
+tip_de_comunicare ~ prin_internet ~ valoare factor cert ~ 80
 enumerare_premise ( 
      in_viata +
+     distanta ~ mare +
+     acces_internet
+     not(mesaj_media) +
      d_orb ~ nu +
      e_orb ~ nu +
-     distanta ~ mare +
-     not(mesaj_media) +
-     acces_internet
+     not(semnal_telefon) +
 ).
 
 
+reg ( 40 )
+tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 95
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     mesaj_media +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     not(acces_internet) +
+     not(semnal_telefon) +
+     linie_fax +
+     numar_telefon
+).
 
+reg ( 41 )
+tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 85
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     not(mesaj_media) +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     not(acces_internet) +
+     not(semnal_telefon) +
+     linie_fax +
+     numar_telefon
+).
+reg ( 42 )
+tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 95
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ mare +
+     mesaj_media +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     not(acces_internet) +
+     not(semnal_telefon) +
+     linie_fax +
+     numar_telefon
+).
+
+reg ( 43 )
+tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 85
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ mare +
+     not(mesaj_media) +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     not(acces_internet) +
+     not(semnal_telefon) +
+     linie_fax +
+     numar_telefon
+).
+
+reg ( 44 )
+tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 87
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     mesaj_media +
+     semnal_telefon +
+     not(acces_internet) +
+     linie_fax +
+     numar_telefon
+).
+
+reg ( 45 )
+tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     d_surd ~ nu +
+     d_mut ~ nu +
+     e_surd ~ nu +
+     e_mut ~ nu +
+     not(mesaj_media)  +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     semnal_telefon +
+     not(acces_internet) +
+     linie_fax +
+     numar_telefon
+).
+
+reg ( 46 )
+tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ mare +
+     mesaj_media +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     semnal_telefon +
+     acces_internet +
+     linie_fax +
+     numar_telefon
+).
+
+reg ( 47 )
+tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     mesaj_media +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     semnal_telefon +
+     acces_internet +
+     linie_fax +
+     numar_telefon
+).
+
+reg ( 48 )
+tip_de_comunicare ~ prin_fax ~ valoare factor cert ~ 40
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ mare +
+     mesaj_media +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     acces_internet +
+     linie_fax +
+     numar_telefon
+).
+
+reg ( 49 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 99
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     acces_posta +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     not(numar_telefon) +
+     not(acces_internet) +
+     adresa_destinatar +
+     limba  
+).
+
+reg ( 50 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 99
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ mare +
+     acces_posta +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     not(numar_telefon) +
+     not(acces_internet) +
+     adresa_destinatar +
+     limba  
+
+).
+reg ( 51 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     numar_telefon +
+     semnal_telefon +
+     adresa_destinatar +
+     limba  
+
+).
+reg ( 52 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     acces_internet +
+     adresa_destinatar +
+     limba  
+
+).
+reg ( 53 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 75
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     adresa_destinatar +
+     limba  
+).
+reg ( 54 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     semnal_telefon +
+     numar_telefon +
+     adresa_destinatar +
+     limba  
+).
+reg ( 55 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 40
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     acces_internet +
+     adresa_destinatar +
+     limba  
+).
+reg ( 56 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 40
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ mare +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     adresa_destinatar +
+     limba  
+).
+reg ( 57 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 30
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ mare +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     semnal_telefon +
+     numar_telefon +
+     adresa_destinatar +
+     limba 
+).
+reg ( 58 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 20
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ mare +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     acces_internet +
+     adresa_destinatar +
+     limba
+).
+reg ( 59 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 99
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     acces_posta +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     not(numar_telefon) +
+     not(acces_internet) +
+     adresa_destinatar +
+     not(limba)  
+).
+
+reg ( 60 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 99
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ mare +
+     acces_posta +
+     d_orb ~ nu +
+     e_orb ~ nu +
+     not(numar_telefon) +
+     not(acces_internet) +
+     adresa_destinatar +
+     not(limba)  
+
+).
+reg ( 61 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     numar_telefon +
+     semnal_telefon +
+     adresa_destinatar +
+     not(limba)  
+
+).
+reg ( 62 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     locatie ~ oras +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     acces_internet +
+     adresa_destinatar +
+     not(limba)  
+
+).
+reg ( 63 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 75
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     adresa_destinatar +
+     not(limba)  
+).
+reg ( 64 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     semnal_telefon +
+     numar_telefon +
+     adresa_destinatar +
+     not(limba)  
+).
+reg ( 65 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 40
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ medie +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     acces_internet +
+     adresa_destinatar +
+     not(limba)  
+).
+reg ( 66 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 40
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ mare +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     adresa_destinatar +
+     not(limba)  
+).
+reg ( 67 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 30
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ mare +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     semnal_telefon +
+     numar_telefon +
+     adresa_destinatar +
+     not(limba) 
+).
+reg ( 68 )
+tip_de_comunicare ~ prin_posta ~ valoare factor cert ~ 20
+enumerare_premise ( 
+     in_viata +
+     locatie ~ insula +
+     distanta ~ mare +
+     acces_posta +
+     e_orb ~ nu +
+     d_orb ~ nu +
+     acces_internet +
+     adresa_destinatar +
+     not(limba)
+).
+reg ( 69 )
+tip_de_comunicare ~ prin_telegraf ~ valoare factor cert ~ 90
+enumerare_premise ( 
+     in_viata +
+     not(mesaj_media) +
+     distanta ~ medie +
+     d_surd ~ nu +
+     e_surd ~ nu +
+     linie_telegraf +
+     not(semnal_telefon) +
+     not(acces_internet) +
+     limba
+).
+
+reg ( 70 )
+tip_de_comunicare ~ prin_telegraf ~ valoare factor cert ~ 80
+enumerare_premise ( 
+     in_viata +
+     not(mesaj_media) +
+     distanta ~ mare +
+     d_surd ~ nu +
+     e_surd ~ nu +
+     linie_telegraf +
+     not(semnal_telefon) +
+     not(acces_internet) +
+     limba
+
+).
+reg ( 71 )
+tip_de_comunicare ~ prin_telegraf ~ valoare factor cert ~ 60
+enumerare_premise ( 
+     in_viata +
+     not(mesaj_media) +
+     distanta ~ medie +
+     d_surd ~ nu +
+     e_surd ~ nu +
+     linie_telegraf +
+     semnal_telefon +
+     numar_telefon +
+     not(acces_internet) +
+     limba
+
+).
+reg ( 72 )
+tip_de_comunicare ~ prin_telegraf ~ valoare factor cert ~ 55
+enumerare_premise ( 
+     in_viata +
+     not(mesaj_media) +
+     distanta ~ mare +
+     d_surd ~ nu +
+     e_surd ~ nu +
+     linie_telegraf +
+     semnal_telefon +
+     numar_telefon +
+     not(acces_internet) +
+     limba
+
+).
+reg ( 73 )
+tip_de_comunicare ~ prin_telegraf ~ valoare factor cert ~ 40
+enumerare_premise ( 
+     in_viata +
+     not(mesaj_media) +
+     distanta ~ medie +
+     d_surd ~ nu +
+     e_surd ~ nu +
+     linie_telegraf +
+     acces_internet +
+     limba
+
+).
+reg ( 74 )
+tip_de_comunicare ~ prin_telegraf ~ valoare factor cert ~ 30
+enumerare_premise ( 
+     in_viata +
+     not(mesaj_media) +
+     distanta ~ mare +
+     d_surd ~ nu +
+     e_surd ~ nu +
+     linie_telegraf +
+     acces_internet +
+     limba
+
+).
 
 
 (intrebare pentru ~ in_viata
@@ -525,5 +1045,16 @@ optiunile
 - nu
 ).
 
+(intrebare pentru ~ linie_telegraf
+textul_intrebarii ~ 'Aveti conexiune pentru telegraf ?'
+optiunile
+- da
+- nu
+).
 
-
+(intrebare pentru ~ acces_posta
+textul_intrebarii ~ 'Aveti acces la serviciul postal ?'
+optiunile
+- da
+- nu
+).
