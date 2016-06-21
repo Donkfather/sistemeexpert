@@ -1,6 +1,17 @@
 scopul~tip_de_comunicare.
 
-
+reg ( 75 )
+d_surdomut ~ da
+enumerare_premise (
+     d_surd ~ da +
+     d_mut ~ da
+)
+reg ( 76 )
+d_surdomut ~ nu
+enumerare_premise (
+     d_surd ~ nu +
+     d_mut ~ un
+)
 
 reg ( 1 )
 d_surd ~ da
@@ -139,8 +150,7 @@ tip_de_comunicare ~ verbala ~ valoare factor cert ~ 99
 enumerare_premise ( 
      in_viata +
      distanta ~ mica +
-     d_surd ~ nu +
-     d_mut ~ nu +
+     d_surdomut ~ nu +
      e_mut ~ nu + 
      e_surd ~ nu +
      limba
@@ -150,8 +160,7 @@ tip_de_comunicare ~ verbala ~ valoare factor cert ~ 70
 enumerare_premise ( 
      in_viata +
      distanta ~ medie +
-     d_surd ~ nu +
-     d_mut ~ nu +
+     d_surdomut ~ nu +
      e_mut ~ nu + 
      e_surd ~ nu +
      limba
@@ -163,9 +172,8 @@ enumerare_premise (
      in_viata +
      distanta ~ mica +
      e_surd ~ nu +
-     d_surd ~ nu +
+     d_surdomut ~ nu +
      e_mut ~ nu +
-     d_mut ~ nu +
      not(limba) 
 ).
 
@@ -177,9 +185,8 @@ enumerare_premise (
      e_orb ~ nu +
      d_orb ~ nu +
      e_surd ~ da +
-     d_surd ~ da +
-     e_mut ~ da +
-     d_mut ~ da 
+     d_surdomut ~ da +
+     e_mut ~ da 
 ).
 
 reg ( 22 )
@@ -220,8 +227,7 @@ enumerare_premise (
      in_viata +
      distanta ~ mica +
      d_orb ~ nu +
-     d_surd ~ da +
-     d_mut ~ da +
+     d_surdomut ~ da +
      e_orb ~ da +
      e_surd ~ nu +
      e_mut ~ nu
@@ -233,8 +239,7 @@ enumerare_premise (
      in_viata +
      distanta ~ mica +
      d_orb ~ da +
-     d_surd ~ nu +
-     d_mut ~ nu + 
+     d_surdomut ~ nu + 
      e_surd ~ da +
      e_mut ~ da +
      e_orb ~ nu
@@ -248,8 +253,7 @@ enumerare_premise (
      semnal_telefon + 
      e_surd ~ nu +
      e_mut ~ nu +
-     d_surd ~ nu +
-     d_mut ~ nu +
+     d_surdomut ~ nu +
      not(mesaj_media) +
      numar_telefon +
      limba
@@ -263,8 +267,7 @@ enumerare_premise (
      semnal_telefon + 
      e_surd ~ nu +
      e_mut ~ nu +
-     d_surd ~ nu +
-     d_mut ~ nu +
+     d_surdomut ~ nu +
      numar_telefon +
      limba
 ).
@@ -277,9 +280,8 @@ enumerare_premise (
      semnal_telefon + 
      numar_telefon +
      e_surd ~ nu +
-     d_surd ~ nu +
+     d_surdomut ~ nu +
      e_mut ~ nu +
-     d_mut ~ nu +
      not(mesaj_media) +
      not(limba)
 ).
@@ -293,9 +295,8 @@ enumerare_premise (
      semnal_telefon + 
      numar_telefon +
      e_surd ~ nu +
-     d_surd ~ nu +
+     dd_surdomut ~ nu +
      e_mut ~ nu +
-     d_mut ~ nu +
      not(mesaj_media) +
      not(limba)
 ).
@@ -306,8 +307,7 @@ enumerare_premise (
      in_viata +
      distanta ~ medie +
      acces_internet
-     d_surd ~ nu +
-     d_mut ~ nu +
+     d_surdomut ~ nu +
      e_surd ~ nu +
      e_mut ~ nu +
      semnal_telefon +
@@ -325,8 +325,7 @@ enumerare_premise (
      acces_internet
      d_orb ~ nu +
      e_orb ~ nu +
-     d_surd ~ nu +
-     d_mut ~ nu +
+     d_surdomut ~ nu +
      e_surd ~ nu +
      e_mut ~ nu +
      semnal_telefon +
@@ -340,8 +339,7 @@ enumerare_premise (
      in_viata +
      distanta ~ mare +
      acces_internet
-     d_surd ~ nu +
-     d_mut ~ nu +
+     d_surdomut ~ nu +
      e_surd ~ nu +
      e_mut ~ nu +
      semnal_telefon +
@@ -357,8 +355,7 @@ enumerare_premise (
      in_viata +
      distanta ~ mare +
      acces_internet
-     d_surd ~ nu +
-     d_mut ~ nu +
+     d_surdomut ~ nu +
      e_surd ~ nu +
      e_mut ~ nu +
      semnal_telefon +
@@ -509,8 +506,7 @@ enumerare_premise (
      in_viata +
      locatie ~ oras +
      distanta ~ medie +
-     d_surd ~ nu +
-     d_mut ~ nu +
+     d_surdomut ~ nu +
      e_surd ~ nu +
      e_mut ~ nu +
      not(mesaj_media)  +
@@ -920,7 +916,6 @@ enumerare_premise (
      linie_telegraf +
      acces_internet +
      limba
-
 ).
 
 
@@ -1058,3 +1053,4 @@ optiunile
 - da
 - nu
 ).
+
